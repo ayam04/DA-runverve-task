@@ -1,104 +1,79 @@
-# **Web Scraping for Data Analysis & Predictive Model on Customer's Data by Tech Titans**
-
+# **Data Analysis & Predictive Modeling of Customer's Data**
 
 ## Table of Contents
-* [Web Scraping for Data Analysis](#web-scraping-for-data-analysis)
-  * [Web Scraping](#web-scraping)
-  * [Data Preprocessing](#data-preprocessing)
-  * [Sentiment Analysis](#sentiment-analysis)
-  * [Data Visualization](#data-visualization)
-* [Predictive Modelling on Customer's Data](#predictive-modelling-on-customers-data)
-  * [Exploratory Data Analysis](#exploratory-data-analysis)
-  * [Mutual Information graphs](#mutual-information-graphs)
-  * [Test and Train Model](#test-and-train-model)
-  * [Validate Model](#validate-model)
-* [Conclusion](#conclusion)
-* [Libraries Utilized](#libraries-utilized)
+- [Web Scraping for Data Analysis](#web-scraping-for-data-analysis)
+  - [Web Scraping](#web-scraping)
+  - [Data Preprocessing](#data-preprocessing)
+  - [Sentiment Analysis](#sentiment-analysis)
+  - [Data Visualization](#data-visualization)
+- [Predictive Modeling on Customer's Data](#predictive-modeling-on-customers-data)
+  - [Exploratory Data Analysis](#exploratory-data-analysis)
+  - [Mutual Information Graphs](#mutual-information-graphs)
+  - [Test and Train Model](#test-and-train-model)
+  - [Validate Model](#validate-model)
+- [Conclusion](#conclusion)
+- [Libraries Utilized](#libraries-utilized)
 
+## **Web Scraping for Data Analysis**
 
-# **Web Scraping for Data Analysis**
+### **Web Scraping**
+We utilized web scraping techniques to gather customer reviews and insights about Air India from [Airline Quality](https://www.airlinequality.com/airline-reviews/air-india/). Extracted data includes customer comments, ratings, and relevant information, compiled into the "Reviews Dataset" for further analysis like predicting customer buying behaviors or understanding sentiments towards Air India's services.
 
+### **Data Preprocessing**
+Data preprocessing involves cleaning, transforming, and integrating data to enhance its quality and suitability for analysis.
 
-## **Web Scraping**
-Web scraping was employed to gather customer reviews and insights about Air India from the website [Airline Quality](https://www.airlinequality.com/airline-reviews/air-india/). Using web scraping techniques, data was extracted from the website, including customer comments, ratings, and other relevant information, which was then compiled into the "Reviews Dataset" for further analysis, such as predicting customer buying behaviors or understanding customer sentiments towards Air India's services.
+#### **Data Cleaning**
+- Removed sentences before '|' in the dataframe.
+- Eliminated special characters from the dataframe.
 
-
-## **Data Preprocessing**
-Data preprocessing is crucial in the data mining process, involving cleaning, transforming, and integrating data for analysis. 
-Its goal is to enhance data quality and suitability for specific tasks
-
-### **Data Cleaning**
-Data cleaning is the process of fixing or removing incorrect, corrupted, incorrectly formatted, duplicate, or incomplete data within a dataset.
-- Removal of sentences before '|' in dataframe
-- Removal of all special characters from the dataframe
-
-### **Tokenization**
-- Tokenization is the process of dividing text into a set of meaningful pieces.
-- Tokens converted to tuples using POS Tagging, grouped into words through lemmatization.
-
+#### **Tokenization**
+- Text was tokenized to meaningful pieces.
+- Tokens were converted to tuples using POS Tagging and grouped into words through lemmatization.
 
 ## **Sentiment Analysis**
-Sentiment analysis is the process of analyzing digital text to determine if the emotional tone of the message is positive, negative, or neutral.
+Analyzing digital text to determine emotional tones (positive, negative, neutral).
 
 ### **VADER**
-- VADER(Valence Aware Dictionary for Sentiment Reasoning) is an NLTK module that provides sentiment scores based on the words used.
-- It is a rule-based sentiment analyzer in which the terms are generally labeled as per their semantic orientation as either positive, negative or neutral.
-
+- VADER (Valence Aware Dictionary for Sentiment Reasoning) provided sentiment scores based on words used.
+- It's a rule-based sentiment analyzer that categorizes terms as positive, negative, or neutral.
 
 ## **Data Visualization**
-Data visualization uses graphics like charts, plots, infographics, and animations to represent complex data relationships and provide easy-to-understand insights.
+Using graphics to represent complex data relationships.
 
 ### **via. Matplotlib**
-Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.
+Matplotlib, a comprehensive library, creates static, animated, and interactive visualizations.
 
-<img src="https://github.com/nilayhangarge/IBM-CSRBOX-Internship-Project/assets/88373687/03e1d670-39bb-4c64-aedd-ccdeb2c39755" width="300">
+![Matplotlib Visualization](https://github.com/nilayhangarge/IBM-CSRBOX-Internship-Project/assets/88373687/03e1d670-39bb-4c64-aedd-ccdeb2c39755.png)
 
 ### **via. WordCloud**
-Wordcloud is basically a visualization technique to represent the frequency of words in a text where the size of the word represents its frequency.
+Wordcloud visually represents word frequency in a text, where size indicates frequency.
 
-<img src="https://github.com/nilayhangarge/IBM-CSRBOX-Internship-Project/assets/88373687/d3770498-5ab5-4707-a44d-5482123565ec" width="450">
+![WordCloud Visualization](https://github.com/nilayhangarge/IBM-CSRBOX-Internship-Project/assets/88373687/d3770498-5ab5-4707-a44d-5482123565ec.png)
 
-
-# **Predictive Modelling on Customer's Data**
-Predictive models are machine learning algorithms trained on high-quality customer data, requiring manipulation and preparation to accurately predict target outcomes.
+# **Predictive Modeling on Customer's Data**
 
 ## **Exploratory Data Analysis**
-- Exploratory Data Analysis is a crucial step in the data analysis process, where the primary goal is to understand the data, gain insights, and identify patterns or relationships between variables.
-- Imported Chardet library(Universal Character Encoding Detector) for UTF-8 encoded code, applied to CSV, and checked for null values.
+- Understanding the data, gaining insights, and identifying patterns.
+- Used Chardet library for UTF-8 encoded code, applied to CSV, and checked for null values.
 
-## **Mutual Information graphs**
-- MI score graphs visualize feature relevance to the target variable, measuring dependency and aiding feature selection.
-- The scikit-learn (sklearn) library calculates the MI_score correlation between attributes, and a graph is plotted for visualization purposes.
+## **Mutual Information Graphs**
+- Visualizes feature relevance to the target variable, aiding feature selection.
+- scikit-learn (sklearn) calculates MI_score correlation between attributes.
 
-<img src="https://github.com/adityabasanti/IBM-CSRBOX-Internship-Project/assets/102895768/9206150b-b50a-4197-9957-0d917629a928" width="500">
+![MI Graphs](https://github.com/adityabasanti/IBM-CSRBOX-Internship-Project/assets/102895768/9206150b-b50a-4197-9957-0d917629a928.png)
 
 ## **Test and Train Model**
-- Test and train split is a crucial step in building and evaluating machine learning models, dividing datasets into training and test sets.
-- Training sets contain 70-80% of data, while test sets allocate 20-30%.
-- The code splits data into training, validation, and testing sets, ensuring model training, validation, and testing on different subsets, preventing overfitting, and providing a reliable evaluation.
+- Divided datasets into training and test sets for building and evaluating machine learning models.
+- Used Min-Max Scaling for consistent scaling across features.
 
-**MinMaxScaler**
-
-Min-Max Scaling is a preprocessing technique for scaling numerical features to a fixed range, ensuring consistent scaling across all features.
-
-### **via. Random Forest Classifier**
-Random Forest is an ensemble learning method combining multiple decision trees, capturing complex relationships and interactions for more accurate and robust models.
-- For top-6 features (Accuracy = 74.5762)
-- For all features (Accuracy = 71.1864)
-
-### **via. XGB(Extreme Gradient Booster) Classifier**
-XGBoost is a popular machine learning algorithm utilizing gradient boosting to optimize model performance and computational efficiency.
-- For top-6 features (Accuracy = 71.1864)
-- For all features (Accuracy = 71.1864)
+### **via. Random Forest Classifier & XGB Classifier**
+Ensemble learning methods providing accurate and robust models.
 
 ## **Validate Model**
-Validating the model on the test dataset is an essential step in the machine learning workflow to assess how well the model performs on unseen data.
-- Accuracy = 71.1864
-
+Assessed model performance on unseen data.
 
 # **Conclusion**
-**The Random Forest classifier with the top 6 features showed slightly higher accuracy than XGBoost. It can predict customer satisfaction or other target variables in datasets. Performance may vary depending on data quality and representativeness.**
-
+**The Random Forest classifier with the top 6 features exhibited slightly higher accuracy than XGBoost. It effectively predicts customer satisfaction or target variables.**
 
 ## **Libraries Utilized**
 - BeautifulSoup (bs4)
@@ -113,4 +88,3 @@ Validating the model on the test dataset is an essential step in the machine lea
 - VaderSentiment (SentimentIntensityAnalyzer)
 - Warnings
 - WordCloud
-  
